@@ -1,0 +1,12 @@
+package: s1
+output: client.go
+generate:
+  client: true
+  models: true
+  embedded-spec: false
+output-options:
+  client-type-name: S1
+  nullable-type: false
+  skip-prune: true
+  initialism-overrides: true
+  response-type-suffix: Res
