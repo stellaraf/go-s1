@@ -35,7 +35,8 @@ func Test_S1(t *testing.T) {
 	client, err := s1.New(Env.ManagementURL, Env.APIToken)
 	require.NoError(t, err)
 	ctx := context.Background()
-	t.Run("basic", func(t *testing.T) {
+	t.Run("accounts", func(t *testing.T) {
+		t.Parallel()
 		res, err := client.AccountsGet(ctx, nil)
 		require.NoError(t, err)
 		accounts, err := s1.ParseAccountsGetRes(res)
